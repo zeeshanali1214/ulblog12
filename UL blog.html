@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>University Of Layyah - Web Tech Lab</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .blog-card,
+        .library-card {
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.30);
+        }
+
+        .library-card:hover {
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .quick-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button:focus-visible,
+        a:focus-visible {
+            outline: 3px solid orange;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 640px) {
+            header nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-orange-400 to-green-600 text-white text-center p-6 shadow-xl">
+
+        <img src="logo.png"
+             alt="University Of Layyah Logo"
+             class="w-36 mx-auto mb-2 rounded shadow-md">
+
+        <h1 class="text-3xl font-bold drop-shadow-lg">
+            University Of Layyah Blog
+        </h1>
+
+        <nav class="mt-4">
+            <a href="#home" class="mx-3 font-semibold hover:text-yellow-200">Home</a>
+            <a href="#blogs" class="mx-3 font-semibold hover:text-yellow-200">Blogs</a>
+            <a href="#library" class="mx-3 font-semibold hover:text-yellow-200">Library</a>
+            <a href="#quicklinks" class="mx-3 font-semibold hover:text-yellow-200">Quick Links</a>
+            <a href="#contact" class="mx-3 font-semibold hover:text-yellow-200">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- Main Content -->
+    <main id="home" class="py-10 px-5 flex flex-col items-center">
+
+        <!-- Blog Section -->
+        <article id="blogs"
+                 class="bg-white w-full max-w-3xl mb-12 rounded-xl overflow-hidden shadow-2xl blog-card">
+
+            <img src="department heading.jpeg"
+                 alt="University Campus"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6 text-center">
+
+                <h2 class="text-2xl font-bold text-blue-600 mb-4">
+                    University Of Layyah - A Growing Hub
+                </h2>
+
+                <p class="mb-4 leading-relaxed">
+                    Welcome to University of Layyah Blog. Here you will
+                    find all the latest news, blogs and updates about
+                    campus life.
+                </p>
+
+            </div>
+        </article>
+
+        <!-- Library Section -->
+        <section id="library" class="w-full max-w-5xl mb-12">
+
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+                Our Central Library
+            </h2>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-2xl library-card">
+
+                <img src="the_library.png"
+                     alt="University Library"
+                     class="w-full h-[400px] object-cover">
+
+                <div class="p-6">
+
+                    <h3 class="text-2xl font-bold text-green-700 mb-3">
+                        A Quiet Place to Learn
+                    </h3>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        University Of Layyah Central Library has thousands
+                        of books, journals and research papers. Students
+                        can sit in a peaceful environment and study.
+                        The library is open from 8 AM to 5 PM.
+                    </p>
+
+                    <button id="libraryButton"
+                            class="mt-4 bg-green-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-700 transition-all">
+                        Visit Library
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section id="quicklinks" class="w-full max-w-5xl">
+
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
+                Quick Links
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Admissions -->
+                <a href="https://uol.edu.pk/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-orange-400 quick-card">
+
+                    <h3 class="font-bold text-lg text-orange-500">
+                        Admissions
+                    </h3>
+
+                    <p class="text-sm text-gray-600 mt-2">
+                        Apply Online & Merit Lists
+                    </p>
+                </a>
+
+                <!-- LMS Portal -->
+                <a href="https://uol.edu.pk/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-green-500 quick-card">
+
+                    <h3 class="font-bold text-lg text-green-600">
+                        LMS Portal
+                    </h3>
+
+                    <p class="text-sm text-gray-600 mt-2">
+                        Student Learning System
+                    </p>
+                </a>
+
+                <!-- Results -->
+                <a href="https://uol.edu.pk/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-blue-500 quick-card">
+
+                    <h3 class="font-bold text-lg text-blue-600">
+                        Results
+                    </h3>
+
+                    <p class="text-sm text-gray-600 mt-2">
+                        Check Exam Results
+                    </p>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 mt-12 shadow-inner">
+
+        <div class="max-w-5xl mx-auto py-8 px-5 grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+
+            <div>
+                <h3 class="text-white font-bold text-xl mb-2">
+                    University Of Layyah
+                </h3>
+
+                <p class="text-sm">
+                    Web Technology Lab Project - BSIT 5th
+                </p>
+
+                <p class="text-sm mt-1">
+                    Layyah, Punjab, Pakistan
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-white font-bold text-lg mb-2">
+                    Contact Us
+                </h3>
+
+                <p class="text-sm">
+                    Email: info@uol.edu.pk
+                </p>
+
+                <p class="text-sm">
+                    Phone: 0606-xxx xxx
+                </p>
+            </div>
+
+        </div>
+
+        <div class="bg-black text-center py-3 text-sm">
+            © 2026 University Of Layyah Blog - All Rights Reserved
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const libraryButton = document.getElementById("libraryButton");
+
+        libraryButton.addEventListener("click", function () {
+            alert("Welcome to the University of Layyah Central Library!");
+        });
+
+        console.log("University of Layyah Blog loaded successfully.");
+    </script>
+
+</body>
+</html>
